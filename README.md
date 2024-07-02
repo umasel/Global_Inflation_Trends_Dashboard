@@ -113,3 +113,4 @@ Our project aims to create an interactive dashboard that visualizes global infla
 1. Replace `./path/to/mockup/image.png` and `./path/to/gantt/chart.png` with the actual paths to the images in your repository.
 2. Ensure that the `requirements.txt` file includes all the necessary Python libraries.
 3. Make sure to provide the `setup.sql` script to set up your PostgreSQL database schema and import the data.
+4. Any additional sources and libraries used to the References section.
