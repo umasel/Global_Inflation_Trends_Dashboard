@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Load the dataset
-file_path = 'Dataset/global_inflation_data.csv'
+file_path = 'Dataset/global_inflation_data_kaggle_raw.csv'
 data = pd.read_csv(file_path)
 
 # Display the first few rows of the dataset
