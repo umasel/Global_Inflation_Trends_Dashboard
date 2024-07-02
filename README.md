@@ -43,7 +43,7 @@ Our project aims to create an interactive dashboard that visualizes global infla
    - Visual representation of these factors
 
 ## Proposal and Dashboard Mock-up
-[Dashboard Mock-up](./path/to/mockup/image.png)
+[Project Proposal](https://github.com/umasel/Global_Inflation_Trends_Dashboard/blob/main/Project%20Documentation/Project%203%20Group%201%20Proposal%20v002.docx)
 
 ## Technology and Tools
 - **Programming Languages**: Python, JavaScript
