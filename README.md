@@ -67,7 +67,7 @@ Our project aims to create an interactive dashboard that visualizes global infla
 - A group presentation summarizing our findings and demonstrating the dashboard
 
 ## Timeline
-![Gantt Chart](Images\Project Gantt.png)
+![Gantt Chart](https://github.com/umasel/Global_Inflation_Trends_Dashboard/blob/main/Images/Project%20Gantt.png)
 
 ## How to Run the Project
 1. **Clone the Repository**:
