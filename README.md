@@ -9,10 +9,10 @@
 - Wendy Ware
 
 ## Project Overview
-Our project aims to create an interactive dashboard that visualizes global inflation trends from 1980 to 2024. Utilizing the dataset sourced from Kaggle, we will provide insightful visualizations that allow users to explore inflation data by country and year, as well as investigate factors influencing inflation.
+Our project aims to create an interactive dashboard that visualises global inflation trends from 1980 to 2024. Utilising the dataset sourced from Kaggle, we will provide insightful visualisations that allow users to explore inflation data by country and year, as well as investigate factors influencing inflation.
 
 ## Dataset
-- **Source**: [Global Inflation Data on Kaggle](https://www.kaggle.com/datasets/sazidthe1/global-inflation-data)
+- **Country Inflation Data Source**: [Global Inflation Data on Kaggle](https://www.kaggle.com/datasets/sazidthe1/global-inflation-data)
 - **Records**: Approximately 196 countries
 - **Timeframe**: 1980-2024
 
