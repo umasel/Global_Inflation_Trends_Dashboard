@@ -12,7 +12,6 @@
 <body>
 
   <div class="container">
-    <!-- Title and Introduction -->
     <div class="row">
       <div class="col-md-12 p-5 text-center bg-light">
         <h1>Global Inflation Analysis Dashboard</h1>
@@ -21,12 +20,11 @@
     </div>
     <br>
     
-    <!-- Country-wise Inflation Trends -->
     <div class="row">
       <div class="col-md-3">
         <div class="card card-body bg-light">
           <h6>Select Country:</h6>
-          <select id="countryDropdown" onchange="countryChanged(this.value)"></select>
+          <select id="countryDropdown"></select>
         </div>
         <br>
         <div class="card card-primary">
@@ -42,12 +40,11 @@
     </div>
     <br>
 
-    <!-- Year-wise Heatmap -->
     <div class="row">
       <div class="col-md-12">
         <div class="card card-body bg-light">
           <h6>Select Year:</h6>
-          <select id="yearDropdown" onchange="yearChanged(this.value)"></select>
+          <select id="yearDropdown"></select>
         </div>
         <br>
         <div id="heatmap"></div>
@@ -55,7 +52,6 @@
     </div>
     <br>
 
-    <!-- Factors Influencing Inflation -->
     <div class="row">
       <div class="col-md-12">
         <div class="card card-body bg-light">
@@ -64,11 +60,19 @@
         </div>
       </div>
     </div>
+    <br>
+
+    <!-- Test Dropdown for Debugging -->
+    <div class="row">
+      <div class="col-md-12">
+        <select id="testDropdown"></select>
+      </div>
+    </div>
   </div>
 
   <script src="https://d3js.org/d3.v7.min.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  <script src="./static/js/app.js"></script>
+  <script src="./static/app.js"></script>
 
 </body>
 

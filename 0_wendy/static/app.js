@@ -13,6 +13,33 @@
 
 // // ==========================================================================================================================================================================
 
+// Function to populate dropdowns with options
+function populateDropdown(dropdownID, options) {
+    console.log(`Populating dropdown with ID: ${dropdownID}`);
+
+    const dropdown = document.getElementById(dropdownID);
+    console.log(`Dropdown element:`, dropdown);
+
+    options.forEach(option => {
+        console.log(`Adding option: ${option}`);
+
+        const opt = document.createElement('option');
+        opt.value = option;
+        opt.innerHTML = option;
+        dropdown.appendChild(opt);        
+    });
+
+    console.log(`Dropdown ${dropdownId} populated successfully!`);
+}
+
+// Example call to the function for testing purposes
+document.addEventListener('DOMContentLoaded', () => {
+    const testOptions = ['1980', '1981', '1982'];
+    populateDropdown('year-dropdown', testOptions);
+});
+
+// // ==========================================================================================================================================================================
+
 // // Function to handle country selection change
 // function countryChanged(value) {
 //   console.log('Country selected:', value);
