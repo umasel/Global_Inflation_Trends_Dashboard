@@ -42,8 +42,8 @@ Our project aims to create an interactive dashboard that visualizes global infla
    - Original research to explore and present factors influencing inflation
    - Visual representation of these factors
 
-## Dashboard Mock-up
-![Dashboard Mock-up](./path/to/mockup/image.png)
+## Proposal and Dashboard Mock-up
+[Dashboard Mock-up](./path/to/mockup/image.png)
 
 ## Technology and Tools
 - **Programming Languages**: Python, JavaScript
