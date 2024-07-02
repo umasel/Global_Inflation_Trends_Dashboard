@@ -67,7 +67,7 @@ Our project aims to create an interactive dashboard that visualizes global infla
 - A group presentation summarizing our findings and demonstrating the dashboard
 
 ## Timeline
-![Gantt Chart](./path/to/gantt/chart.png)
+![Gantt Chart](Images\Project Gantt.png)
 
 ## How to Run the Project
 1. **Clone the Repository**:
