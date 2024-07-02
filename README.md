@@ -82,17 +82,21 @@ Our project aims to create an interactive dashboard that visualizes global infla
     ```
 3. **Install the Dependencies**:
     ```bash
+    pip install -r requirements.txt
     ```
 4. **Set Up the Database**:
     - Ensure PostgreSQL is installed and running.
     - Create a new database:
     ```sql
+    CREATE DATABASE inflation_db;
     ```
     - Run the provided SQL script to set up the schema and import data:
     ```bash
+    psql -U yourusername -d inflation_db -f setup.sql
     ```
 5. **Run the Application**:
     ```bash
+    flask run
     ```
 6. **Access the Dashboard**:
     - Open your web browser and go to `http://localhost:5000`.
