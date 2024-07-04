@@ -1,5 +1,13 @@
 // // ==========================================================================================================================================================================
+let inflationData = {};
 
+d3.csv("../Dataset/cleaned_global_inflation_data.csv").then(function(data) {
+    console.log("CSV data loaded successfully");
+    data.forEach(function(d) {
+        inflationData[d.Country] = +d["2024"]; // Adjust year as needed
+    });
+    console.log("Inflation Data: ", inflationData);
+})
 // // Function to populate dropdowns with options
 // function populateDropdown(dropdownId, options) {
 //   const dropdown = document.getElementById(dropdownId);
