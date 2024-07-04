@@ -24,10 +24,12 @@ function chooseColor(rate) {
 // Load the inflation data
 let inflationData = {};
 
-d3.csv("../Dataset/cleaned_global_inflation_data.csv").then(function(data) {
+d3.csv("sorted_df.csv").then(function(data) {
     console.log("CSV data loaded successfully");
     data.forEach(function(d) {
-        inflationData[d.Country] = +d["2024"]; // Adjust year as needed
+        if (+d.year === 2024) { // Filter for the year 2024
+            inflationData[d.country_name] = +d.inflation_rate; 
+        }
     });
     console.log("Inflation Data: ", inflationData);
 
