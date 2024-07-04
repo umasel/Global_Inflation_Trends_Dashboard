@@ -1,4 +1,4 @@
-country_name,indicator_name,sex,age_group,age_categories,year,unemployment,id
+Country,Indicator,Gender,Age_Group,age_categories,Year,Unemployment_Rate,ID
 Afghanistan,Unemployment rate by sex and age,Female,15-24,Youth,2014,13.34,Afghanistan_Female_15-24_Youth_2014
 Afghanistan,Unemployment rate by sex and age,Female,25+,Adults,2014,8.576,Afghanistan_Female_25+_Adults_2014
 Afghanistan,Unemployment rate by sex and age,Female,Under 15,Children,2014,10.306,Afghanistan_Female_Under 15_Children_2014

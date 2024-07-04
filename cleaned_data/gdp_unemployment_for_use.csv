@@ -1,4 +1,4 @@
-Country Name,Country Code,year,unemployment,id
+Country,Code,Year,Unemployment_Rate,ID
 Africa Eastern and Southern,AFE,1991,7.8,Africa Eastern and Southern_1991
 Afghanistan,AFG,1991,10.65,Afghanistan_1991
 Africa Western and Central,AFW,1991,4.42,Africa Western and Central_1991

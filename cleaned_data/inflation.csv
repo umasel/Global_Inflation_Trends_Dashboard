@@ -1,4 +1,4 @@
-country_name,indicator_name,year,inflation_rate,id
+Country,Indicator,Year,Inflation_Rate,ID
 Afghanistan,Annual average inflation (consumer prices) rate,1980,13.4,Afghanistan_1980
 Albania,Annual average inflation (consumer prices) rate,1980,,Albania_1980
 Algeria,Annual average inflation (consumer prices) rate,1980,9.7,Algeria_1980
