@@ -1,3 +1,19 @@
+// Function to clear the time series plot
+function clearTimeseries() {
+    let timeseriesDiv = document.getElementById("timeseries");
+    if (timeseriesDiv) {
+        timeseriesDiv.remove();
+    }
+}
+
+// Function to clear the bar chart plot
+function clearBarChart() {
+    let timeseriesDiv = document.getElementById("timeseries");
+    if (timeseriesDiv) {
+        timeseriesDiv.remove();
+    }
+}
+
 // Creating the map object with worldCopyJump and minZoom options
 let myMap = L.map("map", {
     center: [20.0, 0.0],
@@ -6,25 +22,25 @@ let myMap = L.map("map", {
     minZoom: 2
 });
 
-// Adding the tile layer
+// Adding the tile layer for the map's background
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(myMap);
 
-// Use this link to get the GeoJSON data for world countries
+// Link to GeoJSON data for world countries
 let link = "https://raw.githubusercontent.com/johan/world.geo.json/master/countries.geo.json";
 
 // Function to determine the color of a country based on the inflation rate
 function chooseColor(rate) {
-    return rate > 10 ? "rgba(255, 0, 0, 0.8)" :    // High inflation (red with 0.5 opacity)
-           rate > 5  ? "rgba(255, 165, 0, 0.8)" : // Medium-high inflation (orange with 0.5 opacity)
-           rate > 2  ? "rgba(255, 255, 0, 0.8)" : // Medium inflation (yellow with 0.5 opacity)
-           rate > 0  ? "rgba(0, 128, 0, 0.8)" :  // Low inflation (green with 0.5 opacity)
-           rate < 0 ? "rgba(128, 0, 128, 0.8)" :  // Negative inflation (purple with 0.5 opacity)
-                       "rgba(128, 128, 128, 0.8)";    // No data (grey with 0.5 opacity)
+    return rate > 10 ? "rgba(255, 0, 0, 0.9)" :    // High inflation (red)
+           rate > 5  ? "rgba(255, 165, 0, 0.9)" : // Medium-high inflation (orange)
+           rate > 2  ? "rgba(255, 255, 0, 0.9)" : // Medium inflation (yellow)
+           rate > 0  ? "rgba(0, 128, 0, 0.9)" :  // Low inflation (green)
+           rate < 0 ? "rgba(128, 0, 128, 0.9)" :  // Negative inflation (purple)
+                       "rgba(128, 128, 128, 0.9)";    // No data (grey)
 }
 
-// Adding the legend to the map
+// Adding a legend to the map
 let legend = L.control({ position: 'bottomleft' });
 
 legend.onAdd = function (map) {
@@ -35,13 +51,13 @@ legend.onAdd = function (map) {
     // Loop through our density intervals and generate a label with a colored square for each interval
     for (let i = 0; i < grades.length; i++) {
         div.innerHTML +=
-            '<i style="background:' + chooseColor(grades[i] + 0.1) + '; width: 18px; height: 18px; display: inline-block; margin-right: 8px; opacity: 0.5;"></i>' +
+            '<i style="background:' + chooseColor(grades[i] + 1) + '; width: 18px; height: 18px; display: inline-block; margin-right: 8px; opacity: 1;"></i>' +
             labels[i] + '<br>';
     }
 
     // Add a grey color for "No data" with the same opacity
     div.innerHTML +=
-        '<i style="background: rgba(128, 128, 128, 0.5); width: 18px; height: 18px; display: inline-block; margin-right: 8px; opacity: 0.5;"></i>' +
+        '<i style="background: rgba(128, 128, 128, 1); width: 18px; height: 18px; display: inline-block; margin-right: 8px; opacity: 0.5;"></i>' +
         'No data<br>';
 
     return div;
@@ -49,7 +65,6 @@ legend.onAdd = function (map) {
 
 // Add the legend to the map
 legend.addTo(myMap);
-
 
 // Mapping of GeoJSON country names to CSV country names
 const countryNameMapping = {
@@ -72,7 +87,7 @@ function getCsvCountryName(geoJsonName) {
     return countryNameMapping[geoJsonName] || geoJsonName;
 }
 
-// Load the inflation data
+// Load the inflation data and create the map
 let inflationData = {};
 let selectedYear = null; // Default year
 let selectedCountry = "all"; // Default country
@@ -80,16 +95,19 @@ let selectedCountry = "all"; // Default country
 function updateMap() {
     d3.json(link).then(function(geoData) {
         console.log("GeoJSON data loaded successfully");
+        
         // Clear previous layers
         myMap.eachLayer(function (layer) {
             if (!!layer.toGeoJSON) {
                 myMap.removeLayer(layer);
             }
         });
+
         // Add the tile layer back
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(myMap);
+
         // Creating a GeoJSON layer with the retrieved data
         L.geoJson(geoData, {
             style: function(feature) {
@@ -112,23 +130,29 @@ function updateMap() {
                 };
             },
             onEachFeature: function(feature, layer) {
+                // Store the original style of the layer
+                let originalStyle = {
+                    fillOpacity: layer.options.fillOpacity,
+                    fillColor: layer.options.fillColor
+                };
+
                 layer.on({
                     mouseover: function(event) {
-                        layer = event.target;
+                        let layer = event.target;
                         layer.setStyle({
                             fillOpacity: 0.9
                         });
                     },
                     mouseout: function(event) {
-                        layer = event.target;
-                        layer.setStyle({
-                            fillOpacity: 0.5
-                        });
+                        let layer = event.target;
+                        // Reset the style back to the original
+                        layer.setStyle(originalStyle);
                     },
                     click: function(event) {
                         myMap.fitBounds(event.target.getBounds());
                     }
                 });
+
                 let country = getCsvCountryName(feature.properties.name);
                 let inflationRate = selectedYear && inflationData[selectedYear] && inflationData[selectedYear][country] ? inflationData[selectedYear][country] : "Data not available";
                 layer.bindPopup("<h1>" + country + "</h1> <hr> <h2>Inflation Rate: " + inflationRate + "%</h2>");
@@ -139,10 +163,8 @@ function updateMap() {
     });
 }
 
-
+// Function to update the time series plot
 function updateTimeseries(country) {
-    if (!selectedYear || !inflationData[selectedYear]) return;
-
     let years = Object.keys(inflationData).sort();
     let rates = years.map(year => inflationData[year][country] || null);
 
@@ -191,7 +213,7 @@ function updateTimeseries(country) {
         }
     ];
 
-    if (country !== "all") {
+    if (country !== "all" && selectedYear !== null) {
         let highlightYear = selectedYear;
         let highlightRate = inflationData[highlightYear][country] || 0;
         traces.push({
@@ -214,9 +236,11 @@ function updateTimeseries(country) {
         xaxis: { title: "Year" },
         yaxis: { title: "Inflation Rate (%)" },
         showlegend: false, // Hide the legend
+        height: 600,
+        width: 1200,
         annotations: [
             {
-                x: 2025,
+                x: 2026,
                 y: mean,
                 xref: 'x',
                 yref: 'y',
@@ -228,7 +252,7 @@ function updateTimeseries(country) {
                 font: { color: 'grey' }
             },
             {
-                x: 2025,
+                x: 2027,
                 y: mean + ci95,
                 xref: 'x',
                 yref: 'y',
@@ -240,7 +264,7 @@ function updateTimeseries(country) {
                 font: { color: 'purple' }
             },
             {
-                x: 2025,
+                x: 2027,
                 y: mean - ci95,
                 xref: 'x',
                 yref: 'y',
@@ -254,9 +278,19 @@ function updateTimeseries(country) {
         ]
     };
 
+    // Add the timeseries div if not already present
+    if (!document.getElementById("timeseries")) {
+        let container = document.querySelector(".container");
+        let timeseriesDiv = document.createElement("div");
+        timeseriesDiv.id = "timeseries";
+        timeseriesDiv.className = "mt-4";
+        container.appendChild(timeseriesDiv);
+    }
+
     Plotly.newPlot("timeseries", traces, layout);
 }
 
+// Function to update the bar chart for the selected year
 function updateBarChart(year) {
     console.log(`Updating bar chart for year: ${year}`);
     let countries = Object.keys(inflationData[year]);
@@ -275,6 +309,10 @@ function updateBarChart(year) {
             type: 'bar',
             text: top10Data.map(d => `${d.country}: ${d.rate}%`),
             hoverinfo: 'text',
+            marker: {
+                color: 'rgba(0, 128, 128, 1.0)',
+                line: 1.5
+            }
         }
     ];
 
@@ -282,12 +320,25 @@ function updateBarChart(year) {
         title: `Top 10 Countries with Highest Inflation Rates in ${year}`,
         xaxis: { title: 'Country' },
         yaxis: { title: 'Inflation Rate (%)' },
+        height: 600,
+        width: 1200,
+        showlegend: false, // Hide the legend
         margin: { t: 30, l: 150 }
     };
+
+    // Add the timeseries div if not already present
+    if (!document.getElementById("timeseries")) {
+        let container = document.querySelector(".container");
+        let timeseriesDiv = document.createElement("div");
+        timeseriesDiv.id = "timeseries";
+        timeseriesDiv.className = "mt-4";
+        container.appendChild(timeseriesDiv);
+    }
 
     Plotly.newPlot("timeseries", barData, layout);
 }
 
+// Function to update the country-specific metadata
 function updateCountryMetadata(country) {
     let years = Object.keys(inflationData).sort();
     let rates = years.map(year => inflationData[year][country]).filter(rate => rate !== undefined);
@@ -309,8 +360,10 @@ function updateCountryMetadata(country) {
     document.getElementById("country-metadata").innerHTML = metadata;
 }
 
+// Load the CSV data and initialise the dashboard
 d3.csv("sorted_df.csv").then(function(data) {
     console.log("CSV data loaded successfully");
+
     // Populate the inflationData object
     data.forEach(function(d) {
         let year = +d.year;
@@ -361,14 +414,55 @@ d3.csv("sorted_df.csv").then(function(data) {
     // Update map and timeseries when country changes
     countrySelect.addEventListener("change", function() {
         selectedCountry = this.value;
-        updateMap();
-        if (selectedCountry !== "all") {
+        if (selectedCountry === "all") {
+            // Clear country-specific statistics
+            document.getElementById("country-metadata").innerHTML = "";
+        } else {
             updateTimeseries(selectedCountry);
             updateCountryMetadata(selectedCountry);
-        } else {
-            updateBarChart(selectedYear);
-            updateCountryMetadata("All Countries");
         }
+        updateMap();
+    });
+
+    // Add event listener for the reset button
+    document.getElementById("reset-view").addEventListener("click", function() {
+        console.log("Reset button clicked"); // Add this for debugging
+
+        // Reset country and year dropdowns to default values
+        document.getElementById("country-select").value = "all";
+        document.getElementById("year-select").value = "select";
+        
+        // Reset selectedCountry and selectedYear variables
+        selectedCountry = "all";
+        selectedYear = null;
+
+        // Reset the map view to the original view
+        myMap.setView([20.0, 0.0], 2);
+
+        // Clear the country-specific statistics
+        document.getElementById("country-metadata").innerHTML = "";
+
+        // Clear the timeseries and bar chart
+        clearTimeseries();
+        clearBarChart();
+
+        // Clear all map layers and re-add the tile layer to remove any previous highlights
+        myMap.eachLayer(function (layer) {
+            if (!!layer.toGeoJSON) {
+                myMap.removeLayer(layer);
+            }
+        });
+
+        // Add the tile layer back
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(myMap);
+
+        // Re-add the legend
+        legend.addTo(myMap);
+
+        // Re-add the map layers
+        updateMap();
     });
 
     // Initial metadata update

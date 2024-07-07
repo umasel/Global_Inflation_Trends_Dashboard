@@ -6,10 +6,30 @@
     <title>Global Inflation Analysis Dashboard</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./static/css/styles.css">
 </head>
 <body>
-    <h1 class="text-center my-4">Global Inflation Map</h1>
-    <div class="container">
+    <div class="container my-4">
+        <div class="row">
+            <div class="col">
+                <h1 class="text-center">Global Inflation Analysis Dashboard</h1>
+                <div class="card my-4">
+                    <div class="card-body">
+                        
+                        <p class="card-text">
+                            Welcome to the Global Inflation Analysis Dashboard. This tool provides an interactive visualisation of inflation rates across different countries and years. 
+                            Use the dropdown menus to select a country and year to view specific data. The map highlights countries based on their inflation rates, and you can see detailed statistics 
+                            and trends in the side panel and charts below.
+                        </p>
+                        <p class="card-text">
+                            Hover over the map to see inflation rates for each country, and click on a country to zoom in for a closer look. Use the reset button to revert to the default view. 
+                            This dashboard is designed to help you quickly understand global inflation trends and compare data across different regions and time periods.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="row mb-3">
             <div class="col-md-3">
                 <div class="card card-body bg-light">
@@ -31,9 +51,10 @@
                 <button id="reset-view" class="btn btn-primary mt-4">Reset View</button>
             </div>
         </div>
+
         <div class="row">
             <div class="col-md-9">
-                <div id="map" class="mb-4" style="height: 600px;"></div>
+                <div id="map" class="mb-4"></div>
             </div>
             <div class="col-md-3">
                 <div class="card card-primary">
@@ -42,11 +63,6 @@
                     </div>
                     <div id="country-metadata" class="card-body"></div>
                 </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div id="timeseries" class="mt-4"></div>
             </div>
         </div>
     </div>
