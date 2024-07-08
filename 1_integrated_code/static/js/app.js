@@ -360,8 +360,8 @@ function updateCountryMetadata(country) {
     document.getElementById("country-metadata").innerHTML = metadata;
 }
 
-// Load the CSV data and initialise the dashboard
-d3.csv("../DB_Extraction/inflation.csv").then(function(data) {
+/// Load the CSV data and initialise the dashboard
+d3.csv("DB_Extraction/inflation.csv").then(function(data) {
     console.log("CSV data loaded successfully");
 
     // Populate the inflationData object
@@ -370,7 +370,7 @@ d3.csv("../DB_Extraction/inflation.csv").then(function(data) {
         if (!inflationData[year]) {
             inflationData[year] = {};
         }
-        inflationData[year][d.country_name] = +d.inflation_rate;
+        inflationData[year][d.country] = +d.inflation_rate;
     });
 
     // Populate the year dropdown
@@ -385,7 +385,7 @@ d3.csv("../DB_Extraction/inflation.csv").then(function(data) {
 
     // Populate the country dropdown
     let countrySelect = document.getElementById("country-select");
-    let countries = Array.from(new Set(data.map(d => d.country_name))).sort();
+    let countries = Array.from(new Set(data.map(d => d.country))).sort();
     countries.forEach(function(country) {
         let option = document.createElement("option");
         option.value = country;
