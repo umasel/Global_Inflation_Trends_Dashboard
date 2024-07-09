@@ -360,6 +360,22 @@ function updateCountryMetadata(country) {
     document.getElementById("country-metadata").innerHTML = metadata;
 }
 
+// Function to hide the Flourish race chart
+function hideFlourish() {
+    let flourishContainer = document.getElementById("flourish-container");
+    if (flourishContainer) {
+        flourishContainer.style.display = "none";
+    }
+}
+
+// Function to show the Flourish race chart
+function showFlourish() {
+    let flourishContainer = document.getElementById("flourish-container");
+    if (flourishContainer) {
+        flourishContainer.style.display = "block";
+    }
+}
+
 /// Load the CSV data and initialise the dashboard
 d3.csv("DB_Extraction/inflation.csv").then(function(data) {
     console.log("CSV data loaded successfully");
@@ -399,10 +415,14 @@ d3.csv("DB_Extraction/inflation.csv").then(function(data) {
     // Add the legend once
     legend.addTo(myMap);
 
+    // Show the Flourish chart initially
+    showFlourish();
+
     // Update map when year changes
     yearSelect.addEventListener("change", function() {
         selectedYear = +this.value;
         updateMap();
+        hideFlourish();
         if (selectedCountry !== "all") {
             updateTimeseries(selectedCountry);
             updateCountryMetadata(selectedCountry);
@@ -414,6 +434,7 @@ d3.csv("DB_Extraction/inflation.csv").then(function(data) {
     // Update map and timeseries when country changes
     countrySelect.addEventListener("change", function() {
         selectedCountry = this.value;
+        hideFlourish();
         if (selectedCountry === "all") {
             // Clear country-specific statistics
             document.getElementById("country-metadata").innerHTML = "";
@@ -445,6 +466,9 @@ d3.csv("DB_Extraction/inflation.csv").then(function(data) {
         // Clear the timeseries and bar chart
         clearTimeseries();
         clearBarChart();
+
+        // Show the Flourish chart
+        showFlourish();
 
         // Clear all map layers and re-add the tile layer to remove any previous highlights
         myMap.eachLayer(function (layer) {

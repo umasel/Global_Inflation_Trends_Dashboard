@@ -1,6 +1,6 @@
 /* Global styles */
 body {
-    background-color: #f8f9fa;
+    background-color: #faf9f8;
     font-family: 'Arial', sans-serif;
 }
 
@@ -105,4 +105,11 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin-bottom: 20px;
+}
+
+/* Midjourney text styling */
+.midjourney-text {
+    color: rgb(9, 75, 58);
+    font-size: 0.8em; /* Small font size */
+    text-align: left;
 }
