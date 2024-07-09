@@ -1,6 +1,6 @@
 /* Global styles */
 body {
-    background-color: #faf9f8;
+    background-color: #d8d8d7;
     font-family: 'Arial', sans-serif;
 }
 
@@ -9,7 +9,7 @@ body {
     height: 600px;
     width: 100%;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(49, 36, 27, 0.1);
 }
 
 /* Legend styling */
@@ -58,14 +58,14 @@ body {
 
 /* Specific styling for the reset button */
 #reset-view {
-    background: hsl(195, 20%, 32%);
+    background: hsl(177, 37%, 30%);
     color: white;
     border: grey;
     padding: 10px 20px;
     font-size: 16px;
     border-radius: 12px;
-    box-shadow: 5px 5px 10px #bebebe,
-                -5px -5px 10px #ffffff;
+    box-shadow: 5px 5px 10px rgba(49, 36, 27, 0.1),
+                -5px -5px 10px rgba(49, 36, 27, 0.1);
     transition: box-shadow 0.3s ease;
     position: relative;
 }
@@ -75,7 +75,7 @@ body {
                 -3px -3px 6px #ffffff;
     color: black;
     background-color: #f8f9fa;
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 8px rgba(49, 36, 27, 0.1);
 }
 
 #reset-view::after {
