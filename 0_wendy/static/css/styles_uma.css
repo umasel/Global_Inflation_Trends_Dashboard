@@ -1,6 +1,8 @@
 /* Global styles */
 body {
-    background-color: #f8f9fa;
+    
+    background-color: lightyellow;
+    background-image: url('https://www.ft.com/__origami/service/image/v2/images/raw/ftcms%3A7fc1abee-68bb-4242-b943-dd5ec6f4c0d9?source=next-article&fit=scale-down&quality=highest&width=1440&dpr=1'); 
     font-family: 'Arial', sans-serif;
 }
 
