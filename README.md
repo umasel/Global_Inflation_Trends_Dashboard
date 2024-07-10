@@ -9,7 +9,7 @@
 - Wendy Ware
 
 ## Project Overview
-Our project aims to create an interactive dashboard that visualises global inflation trends from 1980 to 2024. Utilising the dataset sourced from Kaggle, we will provide insightful visualisations that allow users to explore inflation data by country and year, as well as investigate factors influencing inflation.
+Our project aims to create an interactive dashboard that visualizes global inflation trends from 1980 to 2024. Utilizing the dataset sourced from Kaggle, we will provide insightful visualizations that allow users to explore inflation data by country and year, as well as investigate factors influencing inflation.
 
 ## Dataset
 - **Country Inflation Data Source**: [Global Inflation Data on Kaggle](https://www.kaggle.com/datasets/sazidthe1/global-inflation-data)
@@ -66,6 +66,23 @@ Our project aims to create an interactive dashboard that visualises global infla
 - A comprehensive README.md file with project overview, instructions, ethical considerations, and references
 - A group presentation summarizing our findings and demonstrating the dashboard
 
+## Repository Layout
+├── Cleaned Data
+├── DB_Extraction
+├── Images
+├── Project Docs
+├── Resources
+├── Starter Code
+├── static
+├── .DS_Store
+├── .env
+├── .gitignore
+├── db_csv_extraction
+├── etl_project3_code
+├── index
+├── README.md
+└── sql_code
+
 ## Timeline
 ![Gantt Chart](https://github.com/umasel/Global_Inflation_Trends_Dashboard/blob/main/Images/Project%20Gantt.png)
 
@@ -76,41 +93,36 @@ Our project aims to create an interactive dashboard that visualises global infla
    cd global-inflation-dashboard
    ```
 2. **Set Up the Virtual Environment**:
-    ```bash
-    python -m venv venv
-    source venv/bin/activate   # On Windows: venv\Scripts\activate
-    ```
+   ```bash
+   python -m venv venv
+   source venv/bin/activate   # On Windows: venv\Scripts\activate
+   ```
 3. **Install the Dependencies**:
-    ```bash
-    pip install -r requirements.txt
-    ```
+   These have been provided in all relevant code files
 4. **Set Up the Database**:
-    - Ensure PostgreSQL is installed and running.
-    - Create a new database:
-    ```sql
-    CREATE DATABASE inflation_db;
-    ```
-    - Run the provided SQL script to set up the schema and import data:
-    ```bash
-    psql -U yourusername -d inflation_db -f setup.sql
-    ```
-5. **Run the Application**:
-    ```bash
-    flask run
-    ```
-6. **Access the Dashboard**:
-    - Open your web browser and go to `http://localhost:5000`.
+   - Ensure PostgreSQL is installed and running.
+   - Create a new database: 
+   ```sql
+   CREATE DATABASE inflation_db;
+   ```
+   - Run the provided SQL script to set up the schema and import data:
+   ```bash
+   psql -U yourusername -d inflation_db -f setup.sql
+   ```
+5. **Serve the Dashboard**:
+   - Open your code editor (e.g., VS Code) and open the project folder.
+   - Use the "Go Live" option to start the Live Server and serve your static files.
+6. Access the Dashboard:
+   - Open your web browser and go to the provided local address (typically `http://127.0.0.1:5500` or similar).
+
+Open your web browser and go to the provided local address (typically http://127.0.0.1:5500 or similar).
+   Code published 
 
 ## References
-- [Global Inflation Data on Kaggle](https://www.kaggle.com/datasets/sazidthe1/global-inflation-data)
-- Any additional sources and libraries used.
+
+Global Inflation Data on Kaggle
+Midjourney.com used for imagery design and rendering
+ChatGPT at Opensources.com use as a co-pilot
 
 ## Acknowledgements
-- We would like to thank our instructors and peers for their support and guidance throughout this project.
-
----
-### Notes:
-1. Replace `./path/to/mockup/image.png` and `./path/to/gantt/chart.png` with the actual paths to the images in your repository.
-2. Ensure that the `requirements.txt` file includes all the necessary Python libraries.
-3. Make sure to provide the `setup.sql` script to set up your PostgreSQL database schema and import the data.
-4. Any additional sources and libraries used to the References section.
+We would like to thank our instructors and peers for their support and guidance throughout this project.

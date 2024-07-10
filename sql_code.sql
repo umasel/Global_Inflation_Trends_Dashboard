@@ -159,25 +159,25 @@ WHERE table_name = 'gdp_unemployment';
 -- Uploading *.csvs (performed in `sh`)
 
 -- -- Inflation
--- \copy inflation (Country, Indicator, Year, Inflation_Rate, ID) FROM 'C:\Users\wware\Desktop\UWA Bootcamp\Challenges\Global_Inflation_Trends_Dashboard\cleaned_data\inflation.csv' DELIMITER ',' CSV HEADER;
+-- \copy inflation (Country, Indicator, Year, Inflation_Rate, ID) FROM 'C:\Users\wware\Desktop\UWA Bootcamp\Challenges\Global_Inflation_Trends_Dashboard\Cleaned Data\inflation.csv' DELIMITER ',' CSV HEADER;
 
 -- -- GDP Growth
--- \copy gdp_growth (Country, Code, Year, GDP_Growth, ID) FROM 'C:\Users\wware\Desktop\UWA Bootcamp\Challenges\Global_Inflation_Trends_Dashboard\cleaned_data\gdp_growth.csv' DELIMITER ',' CSV HEADER;
+-- \copy gdp_growth (Country, Code, Year, GDP_Growth, ID) FROM 'C:\Users\wware\Desktop\UWA Bootcamp\Challenges\Global_Inflation_Trends_Dashboard\Cleaned Data\gdp_growth.csv' DELIMITER ',' CSV HEADER;
 
 -- -- GDP Per Capita
--- \copy gdp_percapita (Country, Code, Year, GDP_per_Capita, ID) FROM 'C:\Users\wware\Desktop\UWA Bootcamp\Challenges\Global_Inflation_Trends_Dashboard\cleaned_data\gdp_percapita.csv' DELIMITER ',' CSV HEADER;
+-- \copy gdp_percapita (Country, Code, Year, GDP_per_Capita, ID) FROM 'C:\Users\wware\Desktop\UWA Bootcamp\Challenges\Global_Inflation_Trends_Dashboard\Cleaned Data\gdp_percapita.csv' DELIMITER ',' CSV HEADER;
 
 -- -- GDP PPP Per Capita
--- \copy gdp_ppp_percapita (Country, Code, Year, GDP_PPP_per_Capita, ID) FROM 'C:\Users\wware\Desktop\UWA Bootcamp\Challenges\Global_Inflation_Trends_Dashboard\cleaned_data\gdp_ppp_percapita.csv' DELIMITER ',' CSV HEADER;
+-- \copy gdp_ppp_percapita (Country, Code, Year, GDP_PPP_per_Capita, ID) FROM 'C:\Users\wware\Desktop\UWA Bootcamp\Challenges\Global_Inflation_Trends_Dashboard\Cleaned Data\gdp_ppp_percapita.csv' DELIMITER ',' CSV HEADER;
 
 -- -- GDP PPP
--- \copy gdp_ppp (Country, Code, Year, GDP_PPP, ID) FROM 'C:\Users\wware\Desktop\UWA Bootcamp\Challenges\Global_Inflation_Trends_Dashboard\cleaned_data\gdp_ppp.csv' DELIMITER ',' CSV HEADER;
+-- \copy gdp_ppp (Country, Code, Year, GDP_PPP, ID) FROM 'C:\Users\wware\Desktop\UWA Bootcamp\Challenges\Global_Inflation_Trends_Dashboard\Cleaned Data\gdp_ppp.csv' DELIMITER ',' CSV HEADER;
 
 -- -- GDP Unemployment
--- \copy gdp_unemployment (Country, Code, Year, Unemployment_Rate, ID) FROM 'C:\Users\wware\Desktop\UWA Bootcamp\Challenges\Global_Inflation_Trends_Dashboard\cleaned_data\gdp_unemployment_for_use.csv' DELIMITER ',' CSV HEADER;
+-- \copy gdp_unemployment (Country, Code, Year, Unemployment_Rate, ID) FROM 'C:\Users\wware\Desktop\UWA Bootcamp\Challenges\Global_Inflation_Trends_Dashboard\Cleaned Data\gdp_unemployment_for_use.csv' DELIMITER ',' CSV HEADER;
 
 -- -- GDP Unemployment by Category
--- \copy gdp_unemployment_by_category (Country, Indicator, Gender, Age_Group, age_categories, Year, Unemployment_Rate, ID) FROM 'C:\Users\wware\Desktop\UWA Bootcamp\Challenges\Global_Inflation_Trends_Dashboard\cleaned_data\gdp_unemployment.csv' DELIMITER ',' CSV HEADER;
+-- \copy gdp_unemployment_by_category (Country, Indicator, Gender, Age_Group, age_categories, Year, Unemployment_Rate, ID) FROM 'C:\Users\wware\Desktop\UWA Bootcamp\Challenges\Global_Inflation_Trends_Dashboard\Cleaned Data\gdp_unemployment.csv' DELIMITER ',' CSV HEADER;
 
 -- -- GDP
--- \copy gdp (Country, Code, Year, GDP, ID) FROM 'C:\Users\wware\Desktop\UWA Bootcamp\Challenges\Global_Inflation_Trends_Dashboard\cleaned_data\gdp.csv' DELIMITER ',' CSV HEADER;
+-- \copy gdp (Country, Code, Year, GDP, ID) FROM 'C:\Users\wware\Desktop\UWA Bootcamp\Challenges\Global_Inflation_Trends_Dashboard\Cleaned Data\gdp.csv' DELIMITER ',' CSV HEADER;
