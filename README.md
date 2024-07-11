@@ -81,9 +81,9 @@ Our project aims to create an interactive dashboard that visualizes global infla
 
 ├── static
 
-   ├──js/app.js
+     ├──js/app.js
 
-   ├──css/styles.css
+     ├──css/styles.css
 
 ├── .DS_Store
 
