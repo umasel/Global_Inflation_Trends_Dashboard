@@ -108,7 +108,7 @@ We followed a standard process, as follows:
 
 
 ## Timeline
-![Gantt Chart](https://github.com/umasel/Global_Inflation_Trends_Dashboard/blob/main/Images/Project%20Gantt.png)
+![Gantt Chart](https://github.com/umasel/Global_Inflation_Trends_Dashboard/blob/82dac62ef0ed8dfadeca7cd3bbe27c4fb7ee5d74/Project%20Docs/Images/Project%20Gantt.png)
 
 ## How to Run the Project
 1. **Clone the Repository**:
