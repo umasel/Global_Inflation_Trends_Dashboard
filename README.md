@@ -122,12 +122,14 @@ By considering these ethical aspects, we ensure that our inflation dashboard pro
 ├── **Images**
 
 ├── **Project Docs**
+    
+    ├──**Images**
 
-├── **Resources**
+├── **Resources** `Raw Data`
 
-├── **Starter Code**
+├── **Starter Code** `Basic Code`
 
-├── **static**
+├── **static** `Stage 5 - Develop and Test`
 
      ├──js/app.js
 
@@ -135,15 +137,15 @@ By considering these ethical aspects, we ensure that our inflation dashboard pro
 
 ├── .DS_Store
 
-├── .env
+├── .env `Private PostgreSQL Credentials` - you will have to set this up yourself
 
 ├── .gitignore
 
-├── db_csv_extraction.ipynb
+├── db_csv_extraction.ipynb `Stage 4 - Database Export`
 
 ├── etl_project3_code.ipynb `Stage 1 - Data Extract`|`Stage 2 - Data Transform`|`Stage 3 - Data Load`
 
-├── index.html
+├── index.html `The Dashboard`
 
 ├── sql_code.ipynb
 
