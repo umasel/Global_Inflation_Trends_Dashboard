@@ -22,7 +22,8 @@ Our project aims to create an interactive dashboard that visualizes global infla
 
 ## Define, Design, Develop and Deploy Process
 We followed a standard process, as follows:
-![Project Process](https://github.com/umasel/Global_Inflation_Trends_Dashboard/blob/main/Project%20Docs/Images/Project%20Dev%20Process%20Flow.png)
+
+![Project Process](https://raw.githubusercontent.com/umasel/Global_Inflation_Trends_Dashboard/main/Project%20Docs/Images/Project%20Dev%20Process%20Flow.png)
 
 ## Dataset
 - **Country Inflation Data Source**: [Global Inflation Data on Kaggle](https://www.kaggle.com/datasets/sazidthe1/global-inflation-data)
