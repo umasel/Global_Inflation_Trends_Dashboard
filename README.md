@@ -48,7 +48,7 @@ We followed a standard process, as follows:
    - Visual representation of these factors
 
 ## Proposal and Dashboard Mock-up
-[Project Proposal](https://github.com/umasel/Global_Inflation_Trends_Dashboard/blob/main/Project%20Documentation/Project%203%20Group%201%20Proposal%20v002.docx)
+[Project Proposal](https://github.com/umasel/Global_Inflation_Trends_Dashboard/blob/386e86b6cba9b609dbbf808037553074d0391a71/Project%20Docs/Project%203%20Group%201%20Proposal%20v002.docx)
 
 ## Technology and Tools
 - **Programming Languages**: Python, JavaScript
