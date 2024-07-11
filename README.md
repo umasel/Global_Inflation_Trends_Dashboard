@@ -2,7 +2,7 @@
 
 ## Project Proposal: Interactive Dashboard on Global Inflation Trends
 
-**Group 1:**
+**Development Team:**
 - Uma Selvaraj (Team Lead)
 - Bailey Strauch
 - Zejing Liang
