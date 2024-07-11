@@ -67,7 +67,7 @@ Our project aims to create an interactive dashboard that visualizes global infla
 - A group presentation summarizing our findings and demonstrating the dashboard
 
 ## Repository Layout
-├── Cleaned Data
+├── Cleaned Data `Transform`
 
 ├── DB_Extraction
 
