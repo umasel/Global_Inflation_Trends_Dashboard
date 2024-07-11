@@ -13,17 +13,17 @@ Our project aims to create an interactive dashboard that visualizes global infla
 
 ## Dataset
 - **Country Inflation Data Source**: [Global Inflation Data on Kaggle](https://www.kaggle.com/datasets/sazidthe1/global-inflation-data)
-- **Records**: Approximately 196 countries
+- **Records**: 196 countries
 - **Timeframe**: 1980-2024
 
 ## Objectives
-1. **Visualize Global Inflation Trends**:
+1. **Visualise Global Inflation Trends**:
    - Create a dropdown selection for countries to display time series data from 1980 to 2024.
    - Display country-specific statistics and metadata.
-2. **Heatmap Visualization**:
+2. **Heatmap Visualisation**:
    - Implement a dropdown selection for years to show a heatmap (Choropleth Map) scaled on inflation rates.
-3. **Research on Influencing Factors (time permitting)**:
-   - Conduct original research to identify and visualize factors influencing inflation.
+3. **Research on Influencing Factors**:
+   - Conduct original research to identify and visualise factors influencing inflation.
 
 ## Key Features
 1. **Title and Introduction**:
@@ -33,7 +33,7 @@ Our project aims to create an interactive dashboard that visualizes global infla
    - Links to data sources
 2. **Country-wise Inflation Trends**:
    - Interactive dropdown for country selection
-   - Time series visualization of inflation rates from 1980 to 2024
+   - Time series visualisation of inflation rates from 1980 to 2024
    - Calculation and presentation of country-specific statistics and metadata
 3. **Year-wise Heatmap**:
    - Interactive dropdown for year selection
@@ -47,9 +47,9 @@ Our project aims to create an interactive dashboard that visualizes global infla
 
 ## Technology and Tools
 - **Programming Languages**: Python, JavaScript
-- **Libraries**: Matplotlib, Pandas, Plotly, Leaflet, and at least one additional visualization library not covered in class (e.g., D3.js or Bokeh)
+- **Libraries**: Matplotlib, Pandas, Plotly, Leaflet, and at least one additional visualisation library not covered in class. We selected Flourish.studio and developed a race bar chart that circulates over the timeframe showing the top ten countries with the highest inflation rate per year.
 - **Database**: PostgreSQL (for storing and querying the dataset)
-- **Backend**: Flask (for serving the interactive visualizations)
+- **Backend**: Flask (for serving the interactive visualisations)
 
 ## Ethical Considerations
 - Ensure data privacy and accuracy
