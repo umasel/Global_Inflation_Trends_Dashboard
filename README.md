@@ -115,9 +115,9 @@ By considering these ethical aspects, we ensure that our inflation dashboard pro
 - A group presentation summarizing our findings and demonstrating the dashboard
 
 ## Repository Layout
-├── **Cleaned Data** `Transform`
+├── **Cleaned Data** `Stage 2 - Data Transform`
 
-├── **DB_Extraction**
+├── **DB_Extraction** `Stage 1 - Data Extract`
 
 ├── **Images**
 
@@ -141,7 +141,7 @@ By considering these ethical aspects, we ensure that our inflation dashboard pro
 
 ├── db_csv_extraction.ipynb
 
-├── etl_project3_code.ipynb `Stage 1 - Data Extract` `Stage 2 - Data Transform` `Stage 3 - Data Load`
+├── etl_project3_code.ipynb `Stage 1 - Data Extract`|`Stage 2 - Data Transform`|`Stage 3 - Data Load`
 
 ├── index.html
 
