@@ -30,6 +30,9 @@ We followed a standard process, as follows:
 - **Records**: 196 countries
 - **Timeframe**: 1980-2024
 
+Data is stored in PostgreSQL. This is the ERD:
+![ERD Image](https://github.com/umasel/Global_Inflation_Trends_Dashboard/blob/82dac62ef0ed8dfadeca7cd3bbe27c4fb7ee5d74/Project%20Docs/Images/inflation_ERD.png)
+
 ## Key Features
 1. **Title and Introduction**:
    - Title of the dashboard
@@ -57,9 +60,47 @@ We followed a standard process, as follows:
 - **Backend**: Flask (for serving the interactive visualisations)
 
 ## Ethical Considerations
-- Ensure data privacy and accuracy
-- Transparent and ethical use of data sources
-- Provide clear references and credits for data and code used
+
+1. Data Integrity and Accuracy:
+
+- Source Reliability: We sourced our data from Kaggle, ensuring that it is accurate, reliable, and up-to-date. We have verified the credibility of the dataset and its original sources to maintain high standards of data integrity.
+- Data Representation: Our commitment is to represent the data accurately without manipulation that could mislead users. We provide clear metadata and documentation about the dataset, including any limitations or biases inherent in the data.
+
+2. Privacy and Security:
+
+- Data Privacy: Although we use publicly available data, we are mindful of any personal or sensitive information that may inadvertently be included. We ensure that any such data is anonymized or excluded to protect individuals' privacy.
+- Security Measures: We implement robust security measures to protect the integrity of our data and the dashboard from unauthorized access and potential cyber threats. We used a library not used in class called `dotenv`, which accesses a .env file with PostgreSQL credentials that can be ignored when pushing to a public repository. This is the script to use:
+
+``` Python
+from dotenv import load_dotenv
+
+# Function to connect to DB
+def connect_to_db():
+    try:
+        connection = psycopg2.connect(
+            user=os.getenv('DB_USER'),
+            password=os.getenv('DB_PASSWORD'),
+            host=os.getenv('DB_HOST'),
+            port=int(os.getenv('DB_PORT')),  # Convert port to integer
+            database=os.getenv('DB_NAME')
+        )
+        return connection
+    except Exception as error:
+        print(f"Error: {error}")
+        return None
+```
+
+3. Transparency and Accountability:
+
+- Development Process: We maintain transparency about our development process, including the use of Midjourney for imagery creation and ChatGPT as a co-pilot in our project. We clearly document the tools and technologies used and the extent of their involvement.
+- Algorithmic Transparency: If our dashboard includes any data analysis or predictive algorithms, we ensure that these are transparent and that users can understand how conclusions are drawn. We provide documentation on the methodologies used.
+
+4. Bias and Fairness:
+
+- Bias Mitigation: We are aware of potential biases in the data and the visualizations. We strive to present the information in a balanced manner, avoiding any form of bias that could influence the interpretation of the data.
+- Inclusive Design: We design our dashboard to be accessible and useful to a diverse audience, taking into account different perspectives and avoiding exclusionary practices.
+
+By considering these ethical aspects, we ensure that our inflation dashboard project is responsible, trustworthy, and respectful of the rights and expectations of our users.
 
 ## Team Collaboration
 - Regular meetings and communication via Slack
