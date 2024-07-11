@@ -123,7 +123,7 @@ By considering these ethical aspects, we ensure that our inflation dashboard pro
 
 ├── **Project Docs**
     
-    ├──**Images**
+    ├──Images
 
 ├── **Resources** `Raw Data`
 
