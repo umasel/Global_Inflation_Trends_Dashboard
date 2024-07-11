@@ -67,19 +67,23 @@ Our project aims to create an interactive dashboard that visualizes global infla
 - A group presentation summarizing our findings and demonstrating the dashboard
 
 ## Repository Layout
-├── Cleaned Data `Transform`
+├── **Cleaned Data** `Transform`
 
-├── DB_Extraction
+├── **DB_Extraction**
 
-├── Images
+├── **Images**
 
-├── Project Docs
+├── **Project Docs**
 
-├── Resources
+├── **Resources**
 
-├── Starter Code
+├── **Starter Code**
 
 ├── static
+
+   ├──js/app.js
+
+   ├──css/styles.css
 
 ├── .DS_Store
 
@@ -87,13 +91,13 @@ Our project aims to create an interactive dashboard that visualizes global infla
 
 ├── .gitignore
 
-├── db_csv_extraction
+├── db_csv_extraction.ipynb
 
-├── etl_project3_code
+├── etl_project3_code.ipynb `Stage 1 - Data Extract` `Stage 2 - Data Transform` `Stage 3 - Data Load`
 
-├── index
+├── index.html
 
-├── sql_code
+├── sql_code.ipynb
 
 └── README.md 
 
