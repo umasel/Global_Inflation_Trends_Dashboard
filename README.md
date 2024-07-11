@@ -79,7 +79,7 @@ Our project aims to create an interactive dashboard that visualizes global infla
 
 ├── **Starter Code**
 
-├── static
+├── **static**
 
      ├──js/app.js
 
