@@ -11,6 +11,8 @@
 ## Project Overview
 Our project aims to create an interactive dashboard that visualizes global inflation trends from 1980 to 2024. Utilizing the dataset sourced from Kaggle, we will provide insightful visualizations that allow users to explore inflation data by country and year, as well as investigate factors influencing inflation.
 
+[Inflation Dashboard]()
+
 ## Objectives
 1. **Visualise Global Inflation Trends**:
    - Create a dropdown selection for countries to display time series data from 1980 to 2024.
