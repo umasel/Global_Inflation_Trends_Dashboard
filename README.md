@@ -11,11 +11,6 @@
 ## Project Overview
 Our project aims to create an interactive dashboard that visualizes global inflation trends from 1980 to 2024. Utilizing the dataset sourced from Kaggle, we will provide insightful visualizations that allow users to explore inflation data by country and year, as well as investigate factors influencing inflation.
 
-## Dataset
-- **Country Inflation Data Source**: [Global Inflation Data on Kaggle](https://www.kaggle.com/datasets/sazidthe1/global-inflation-data)
-- **Records**: 196 countries
-- **Timeframe**: 1980-2024
-
 ## Objectives
 1. **Visualise Global Inflation Trends**:
    - Create a dropdown selection for countries to display time series data from 1980 to 2024.
@@ -24,6 +19,15 @@ Our project aims to create an interactive dashboard that visualizes global infla
    - Implement a dropdown selection for years to show a heatmap (Choropleth Map) scaled on inflation rates.
 3. **Research on Influencing Factors**:
    - Conduct original research to identify and visualise factors influencing inflation.
+
+## Define, Design, Develop and Deploy Process
+We followed a standard process, as follows:
+![Project Process](C:\Users\wware\Desktop\UWA Bootcamp\Challenges\Global_Inflation_Trends_Dashboard\Project Docs\Images\Project Dev Process Flow.png)
+
+## Dataset
+- **Country Inflation Data Source**: [Global Inflation Data on Kaggle](https://www.kaggle.com/datasets/sazidthe1/global-inflation-data)
+- **Records**: 196 countries
+- **Timeframe**: 1980-2024
 
 ## Key Features
 1. **Title and Introduction**:
