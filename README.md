@@ -68,20 +68,35 @@ Our project aims to create an interactive dashboard that visualizes global infla
 
 ## Repository Layout
 ├── Cleaned Data
+
 ├── DB_Extraction
+
 ├── Images
+
 ├── Project Docs
+
 ├── Resources
+
 ├── Starter Code
+
 ├── static
+
 ├── .DS_Store
+
 ├── .env
+
 ├── .gitignore
+
 ├── db_csv_extraction
+
 ├── etl_project3_code
+
 ├── index
-├── README.md
-└── sql_code
+
+├── sql_code
+
+└── README.md 
+
 
 ## Timeline
 ![Gantt Chart](https://github.com/umasel/Global_Inflation_Trends_Dashboard/blob/main/Images/Project%20Gantt.png)
