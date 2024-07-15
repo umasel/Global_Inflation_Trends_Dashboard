@@ -9,7 +9,7 @@
 - Wendy Ware
 
 ## Project Overview
-Our project aims to create an interactive dashboard that visualizes global inflation trends from 1980 to 2024. Utilizing the dataset sourced from Kaggle, we will provide insightful visualizations that allow users to explore inflation data by country and year, as well as investigate factors influencing inflation.
+Our project aims to create an interactive dashboard that visualises global inflation trends from 1980 to 2024. Utilising the dataset sourced from Kaggle, we will provide insightful visualisations that allow users to explore inflation data by country and year.
 
 [Inflation Dashboard](https://umasel.github.io/Global_Inflation_Trends_Dashboard/)
 
@@ -20,7 +20,7 @@ Our project aims to create an interactive dashboard that visualizes global infla
 2. **Heatmap Visualisation**:
    - Implement a dropdown selection for years to show a heatmap (Choropleth Map) scaled on inflation rates.
 3. **Research on Influencing Factors**:
-   - Conduct original research to identify and visualise factors influencing inflation.
+   - Conduct original research to identify and visualise factors influencing inflation. This was done outside the dashboard and the outcomes are presented in this [Presentation](https://github.com/umasel/Global_Inflation_Trends_Dashboard/blob/0f3cc2eb69a92bf2897fe913560976f1058f321b/Project%20Docs/Group%203%20-%20Presentation.pptx).
 
 ## Define, Design, Develop and Deploy Process
 We followed a standard process, as follows:
@@ -39,15 +39,15 @@ Data is stored in PostgreSQL. This is the ERD:
 1. **Title and Introduction**:
    - Title of the dashboard
    - An introductory image
-   - A brief blurb about the project
+   - A brief blurb about the project with instructions on navigating the dashboard
    - Links to data sources
 2. **Country-wise Inflation Trends**:
    - Interactive dropdown for country selection
    - Time series visualisation of inflation rates from 1980 to 2024
-   - Calculation and presentation of country-specific statistics and metadata
+   - Calculation and presentation of country-specific statistics
 3. **Year-wise Heatmap**:
    - Interactive dropdown for year selection
-   - Choropleth map to visualize global inflation rates for the selected year
+   - Choropleth map to visualise global inflation rates for the selected year
 4. **Factors Influencing Inflation**:
    - Original research to explore and present factors influencing inflation
    - Visual representation of these factors
